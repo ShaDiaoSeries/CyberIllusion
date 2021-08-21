@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <title>Cyber Illusion Generator</title>
+        <link rel="stylesheet" href="css/layui.css">
+    </head>
+
+    <body>
+        <div id="text_replace_setting">
+            <p id="text_replace_title">网页对象替换列表</p>
+            <form class="layui-form" id="config-form" action="">
+                
+            </form>
+            <button id="add_text_replace_rule_btn" class="layui-btn">添加</button>
+            <button id="save_btn" class="layui-btn">保存</button>
+        </div>
+    </body>
+    <script src="js/layui.js"></script>
+    <script src="js/options.js"></script>
+
+    <!-- DOM Templates for cloning -->
+    <div class="layui-form-item config-form-item" hidden>
+        <div class="layui-inline">
+            <label class="layui-form-label">替换前</label>
+            <div class="layui-input-inline">
+                <input type="text" name="before-change" placeholder="请输入" autocomplete="off" class="layui-input before-change">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">替换后</label>
+            <div class="layui-input-inline">
+                <input type="text" name="after-change" placeholder="请输入" autocomplete="off" class="layui-input after-change">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">替换对象</label>
+            <div class="layui-input-block replace-item">
+                <input type="radio" name="row0" value="text" title="页面文字" checked>
+                <input type="radio" name="row0" value="url" title="链接地址">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <button type="button" id="row_delete_btn" class="layui-btn row-delete-btn">删除</button>
+        </div>
+    </div>
+</html>
